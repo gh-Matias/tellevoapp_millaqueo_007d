@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="volver"
+        color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear grupo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Iniciar sesion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-list>
+  
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" placeholder="matias@gmail.com"  name="email"
+              [(ngModel)]="persona.email"></ion-input>
+              <ion-note slot="helper">ingresa un email valido </ion-note>
+              <ion-note slot="error">email invalido</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" placeholder="••••••"name="password"
+                  [(ngModel)]="persona.password"></ion-input>
+          </ion-item>
+          <br>
+
+          <ion-button (click)="olvidar()" expand="block" fill="clear" size="small" color="dark"shape="round">
+          Olvide mi contraseña
+          </ion-button>
+          
+
+          <ion-button routerLink="/viaje" expand="block" fill="solid" color="success" shape="round" >
+            Iniciar
+          </ion-button>
+          <br>
+
+          
+
+        
+
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+</ion-content>

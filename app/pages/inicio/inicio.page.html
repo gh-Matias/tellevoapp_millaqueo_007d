@@ -1,0 +1,145 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title></ion-title>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="small"><ion-icon name="car-sport"></ion-icon> TeLlevoapp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  
+
+  <!--card 1-->
+  <ion-card >
+    <ion-img
+  src="assets/taxidri.jpg"
+  alt="1970s New York, focuses on the life of Travis Bickle, at night"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle >La forma más rápida y segura de moverte por la ciudad</ion-card-subtitle>
+      <ion-card-title>Bienvenido a Tu App de Transporte </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="texto">
+      
+    </ion-card-content>
+    <h4>Elige tu próximo destino !</h4>
+    <img src="assets/card01.jpg" class="ion-padding fondoImg">
+     <h4>Reunete para viajar !</h4>
+    <img src="assets/compartido.jpg" class="ion-padding fondoImg">
+
+  </ion-card>
+
+
+  <!--card 2-->
+   <ion-card  >
+    <ion-card-header>
+      <ion-card-subtitle ></ion-card-subtitle>
+      <ion-card-title >¡Llega a tus clases con comodidad y puntualidad!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="texto">
+      Con nuestra app de transporte, cada viaje es una oportunidad para acercarte a tus metas académicas. ¡Viaja con nosotros y llega más lejos en tu educación!
+    </ion-card-content>
+    <img src="assets/sede.jpg" class="ion-padding fondoImg">
+
+   </ion-card>
+
+
+   <!--card 3-->
+   <ion-card >
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title> Comparte tus viajes con amigos en nuestra app y reduce la huella de carbono de tu grupo</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="texto">
+      Cada viaje compartido es un paso hacia un futuro más sostenible. ¡Únete a nosotros y hagamos un impacto positivo en el medio ambiente!"
+    </ion-card-content>
+    <img src="assets/group.avif" class="ion-padding fondoImg">
+
+    <ion-button class="btnk2" routerLink="/unirse" expand="block" size="default" fill="solid" shape="round"  >
+      Unete a un grupo
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+
+    <br>
+
+    <!--card 4-->
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>¡Tu éxito académico es nuestra prioridad!"</ion-card-title>
+    </ion-card-header>
+     
+
+    <ion-card-content class="texto">
+      Asiste a clases seguido usando nuestra app y desbloquea increíbles descuentos exclusivos
+      
+    </ion-card-content>
+    <img src="assets/desc.avif" class="ion-padding fondoImg">
+
+  
+  </ion-card>
+
+  
+  
+
+
+
+
+    <main>
+        <section class="cta">
+            <h2>¿Listo para tu próximo viaje?</h2>
+            <p>Ingresa tu destino y comienza tu aventura.</p>
+            <ion-button class="btnk" routerLink="/formulario" expand="block" size="default" fill="solid" shape="round"  >
+              Regístrate
+              <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+        </section>
+        <br>
+
+        <section class="features">
+            <h2>Te garantizamos un servicio </h2>
+            <ul>
+                <li>Rápido y Conveniente</li>
+                <li>Seguridad Garantizada</li>
+                <li>Tarifas accesibles</li>
+                <li>Disponibilidad 24/7</li>
+            </ul>
+
+        </section>
+    </main>
+
+  <!--
+  <h2>Mi primera App </h2>
+  <ion-button routerLink="/alert"  expand="block" shape="round">
+    Alert
+  </ion-button>
+
+  <ion-button routerLink="/action-sheet" expand="block" color="success" shape="round">
+    Action-Sheet
+  </ion-button>
+  -->
+  
+</ion-content>
+
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

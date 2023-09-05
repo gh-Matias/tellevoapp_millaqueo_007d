@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/"
+        text="volver"
+        color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>ruta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ruta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="fondoHeader">
+    <ion-card-header class="fondoHeader" >
+      <ion-card-subtitle class="colorTitulos" style="color:rgb(247, 243, 243)"></ion-card-subtitle>
+      <ion-card-title class="colorTitulos" style="color:rgb(243, 241, 241)" >Ubicacion</ion-card-title>
+    </ion-card-header>
+    <img src="assets/apimap.jpg" class="ion-padding fondoImg">
+    <ion-card-content class="fondoContent">
+
+      <form>
+        <label for="destino" class="text">Indique el destino :         </label>
+        <select id="Viaje" name="Viaje">
+          <option value="ED">Destino</option>
+          <option value="MU">Maipu</option>
+          <option value="PO">Puente alto</option>
+          <option value="PL">Pudahuel</option>
+          <option value="QA">Quilicura</option>
+          <option value="SB">San bernardo</option>
+          <option value="LC">Las condes</option>
+          <!-- Destinos -->
+        </select>
+        <input type="submit" value="Mostrar rutas">
+      </form>
+     
+    </ion-card-content>
+  
+  </ion-card>
+
+
+  <ion-card class="fondoHeader">
+    <ion-card-header class="fondoHeader">
+      <ion-card-subtitle class="colorTitulos" style="color:rgb(255, 253, 253)"></ion-card-subtitle>
+      <ion-card-title class="colorTitulos" style="color:rgb(255, 255, 255)" >Vehiculos disponibles </ion-card-title>
+    </ion-card-header>
+
+    <ion-list>
+     <ion-item>
+      <ion-thumbnail slot="start" >
+        <img alt="sedan" src="assets/sedan.jpg" />
+      </ion-thumbnail>
+
+      <ion-checkbox slot="start" ></ion-checkbox>
+      <ion-label>Sedan</ion-label>
+    </ion-item>
+    
+
+    </ion-list>
+    
+
+    <ion-item>
+      <ion-label>
+        <h4>Asientos</h4>
+        <p> 4 </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h4>Valor</h4>
+        <p> $2.000 </p>
+      </ion-label>
+    </ion-item>
+
+  </ion-card>
+
+
+  <ion-button (click)="finalizar()" expand="block" fill="solid" color="success" shape="round">
+    Aceptar
+    </ion-button>
+
+
+
+
+
+
+</ion-content>
