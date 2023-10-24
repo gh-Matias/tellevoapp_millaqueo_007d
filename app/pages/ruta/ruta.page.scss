@@ -1,10 +1,23 @@
+.cerrar-sesion-button {
+    background: none; /* Elimina el fondo de color rojo */
+    color: rgb(255, 255, 255); /* Cambia el color del texto a negro */
+    text-align: right; /* Alinea el botón a la derecha */
+}
+
 .text{
     color: rgb(245, 248, 247);
+    letter-spacing: 0;
+    text-align:start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    font-family: 'Playfair Display', serif;
+
 }
 
 .fondoContent{
     color:rgb(10, 10, 10);
-    text-align: justify;
+    text-align: start;
     padding:10%;
 }
 .fondoHeader{

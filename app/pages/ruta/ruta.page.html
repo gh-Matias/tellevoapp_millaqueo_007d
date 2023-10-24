@@ -12,14 +12,19 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">ruta</ion-title>
+      <ion-title size="large" class="title" >ruta</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-button  fill="clear" expand="block" color="default" class="cerrar-sesion-button" (click)="cerrarSesion()">
+    <ion-icon name="exit-outline" slot="start"></ion-icon>
+    Cerrar Sesión
+  </ion-button>
 
   <ion-card class="fondoHeader">
     <ion-card-header class="fondoHeader" >
       <ion-card-subtitle class="colorTitulos" style="color:rgb(247, 243, 243)"></ion-card-subtitle>
-      <ion-card-title class="colorTitulos" style="color:rgb(243, 241, 241)" >Ubicacion</ion-card-title>
+      <ion-card-title style="color:rgb(243, 241, 241)" >Ubicacion</ion-card-title>
     </ion-card-header>
     <img src="assets/apimap.jpg" class="ion-padding fondoImg">
     <ion-card-content class="fondoContent">
@@ -47,7 +52,7 @@
   <ion-card class="fondoHeader">
     <ion-card-header class="fondoHeader">
       <ion-card-subtitle class="colorTitulos" style="color:rgb(255, 253, 253)"></ion-card-subtitle>
-      <ion-card-title class="colorTitulos" style="color:rgb(255, 255, 255)" >Vehiculos disponibles </ion-card-title>
+      <ion-card-title  style="color:rgb(255, 255, 255)" >Vehiculos disponibles </ion-card-title>
     </ion-card-header>
 
     <ion-list>

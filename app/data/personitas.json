@@ -1,0 +1,42 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "matias",
+      "correo": "matias@duocuc.cl",
+      "password": "duoc1234",
+      "role": "usuario",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "username": "cachupina",
+      "password": "maipu",
+      "role": "usuario",
+      "isactive": true
+    },
+    {
+      "id": 3,
+      "username": "matios",
+      "correo": "matios@duoc.cl",
+      "password": "duoc1234",
+      "role": "",
+      "isactive": true
+    },
+    {
+      "id": 4,
+      "username": "matias",
+      "correo": "matias@duoc.cl",
+      "password": "matias",
+      "role": "",
+      "isactive": true
+    }
+  ],
+  "vehiculos": [
+    {
+      "tipo": "",
+      "matricula": "",
+      "capacidad": 0
+    }
+  ]
+}

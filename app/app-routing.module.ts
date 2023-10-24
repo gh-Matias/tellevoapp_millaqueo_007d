@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AutorizadoGuard } from './guards/autorizado.guard';
+
 
 const routes: Routes = [
   
@@ -23,7 +25,8 @@ const routes: Routes = [
   },
   {
     path: 'viaje',
-    loadChildren: () => import('./pages/viaje/viaje.module').then( m => m.ViajePageModule)
+    loadChildren: () => import('./pages/viaje/viaje.module').then( m => m.ViajePageModule),
+    canActivate: [AutorizadoGuard]
   },
   {
     path: 'unirse',
@@ -31,7 +34,12 @@ const routes: Routes = [
   },
   {
     path: 'ruta',
-    loadChildren: () => import('./pages/ruta/ruta.module').then( m => m.RutaPageModule)
+    loadChildren: () => import('./pages/ruta/ruta.module').then( m => m.RutaPageModule),
+    canActivate: [AutorizadoGuard]
+  },
+  {
+    path: 'saludo',
+    loadChildren: () => import('./pages/saludo/saludo.module').then( m => m.SaludoPageModule)
   },
   
 ];

@@ -6,15 +6,18 @@ ion-checkbox::part(container) {
     
   }
 
-
-
+.title{
+  font-family: 'Playfair Display', serif;
+  text-align:left;
+  
+}
 .fondoHeader{
-  background-color:rgb(77, 172, 124);
+  background-color:rgb(55, 207, 131);
 }
 
 .fondoContent{
     color:rgb(10, 10, 10);
-    text-align: justify;
+    text-align: start;
     padding:10%;
 }
 .ion-title{
@@ -22,7 +25,10 @@ ion-checkbox::part(container) {
     
 }
 .text{
-  color: azure;
+  color: rgb(254, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: start;
+  letter-spacing: 0;
 }
 
 img {
@@ -34,4 +40,10 @@ img {
     max-width: 50px; /* Ajusta el tamaño máximo en píxeles según tus necesidades */
     height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
   }
+
+.cerrar-sesion-button {
+  background: none; /* Elimina el fondo de color rojo */
+  color: rgb(255, 255, 255); /* Cambia el color del texto a negro */
+  text-align: right; /* Alinea el botón a la derecha */
+}
   

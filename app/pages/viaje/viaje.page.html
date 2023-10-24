@@ -5,19 +5,23 @@
         text="volver"
         color="primary"> </ion-back-button>
     </ion-buttons>
-    <ion-title> Viaje </ion-title>
+    <ion-title ></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">viaje</ion-title>
+      <ion-title size="medium" class="title">detalle del viaje</ion-title>
       <ion-avatar slot="end" >
         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" class="logo"/>
       </ion-avatar>
     </ion-toolbar>
   </ion-header>
+  <ion-button  fill="clear" expand="block" color="default" class="cerrar-sesion-button" (click)="cerrarSesion()">
+    <ion-icon name="exit-outline" slot="start"></ion-icon>
+    Cerrar Sesión
+  </ion-button>
   
 
   <ion-card>
@@ -29,7 +33,7 @@
     <ion-card-content class="fondoContent">
 
       <form>
-        <label for="destino" class="text"> Selecciona la comuna :  </label>
+        <label for="destino" class="text">Seleccionar la comuna :  </label>
         <select id="Viaje" name="Viaje">
           <option value="ED">Elegir Comuna</option>
           <option value="MU">Maipu</option>
@@ -103,16 +107,23 @@
   <ion-card-content class="fondoContent">
 
     <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Matricula</ion-label>
+        <ion-input type="text" placeholder="xxxxx"  name="matricula"
+              [(ngModel)]="vehiculo1.matricula"></ion-input>
+      </ion-item>
+
       <ion-item>
         <ion-label position="floating">Tarifa</ion-label>
         <ion-input type="number" placeholder="$$$$"  name="tarifa"
-              [(ngModel)]="vehiculo.tarifa"></ion-input>
+              [(ngModel)]="vehiculo1.tarifa"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Capacidad</ion-label>
         <ion-input type="number" placeholder="8"  name="capacidad"
-              [(ngModel)]="vehiculo.capacidad"></ion-input>
+              [(ngModel)]="vehiculo1.capacidad"></ion-input>
       </ion-item>
       
     </ion-list>

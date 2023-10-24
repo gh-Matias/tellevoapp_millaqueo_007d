@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title class="title"></ion-card-title>
+    </ion-card-header>
+
+      <ion-card-content class="ion-padding">
+        <div class="bienvenida-container">
+          <ion-icon name="person-circle" class="user-icon"></ion-icon>
+          <h1 class="bienvenida-heading">¡Bienvenido de nuevo, {{ usuario || 'Invitado' }} !</h1>
+          <p class="text">Estamos felices de verte de nuevo en nuestra aplicación</p>
+          <p class="user-greeting"> </p>
+        </div>
+      </ion-card-content>
+      
+
+
+    <ion-button class="btnk2" routerLink="/viaje" expand="block" size="default" color="success" fill="solid" shape="round"  >
+      Continuar
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+    <br>
+
+  </ion-card>
+
+
+  </ion-content>

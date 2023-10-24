@@ -7,72 +7,55 @@
     </ion-buttons>
     <ion-title> </ion-title>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    
   </ion-header>
 
   <ion-card>
     <ion-card-header>
       <ion-card-title>Registro</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      <form>
-        <ion-list>
-          <ion-item>
-            <ion-label position="floating">Nombre</ion-label>
-            <ion-input type="text" placeholder="matias"  name="nombre"
-                  [(ngModel)]="persona.nombre"></ion-input>
-          </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Apellido</ion-label>
-            <ion-input type="text" placeholder="molina"  name="apellido"
-                  [(ngModel)]="persona.apellido"></ion-input>
-          </ion-item>
+    <form>
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" name="txtNombre" [(ngModel)]="newUsuario.username" placeholder="matias" required></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" name="txtcorreo" [(ngModel)]="newUsuario.correo" placeholder="matias@gmail.com" required></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" name="txtPassword" [(ngModel)]="newUsuario.password" placeholder="*****" required></ion-input>
+      </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Email</ion-label>
-              <ion-input type="email" placeholder="matias@gmail.com"  name="email"
-              [(ngModel)]="persona.email"></ion-input>
-              <ion-note slot="helper">ingresa un email valido </ion-note>
-              <ion-note slot="error">email invalido</ion-note>
-          </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Vehiculo</ion-label>
+        <ion-input type="text" name="txttipo" [(ngModel)]="newVehiculo.tipo" placeholder="sedan" required></ion-input>
+      </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Telefono</ion-label>
-            <ion-input type="tel" placeholder="8888-8888-888"  name="telefono"
-                  [(ngModel)]="persona.telefono"></ion-input>
-          </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Matricula</ion-label>
+        <ion-input type="text" name="txtmatricula" [(ngModel)]="newVehiculo.matricula" placeholder="GW-KG-64" required></ion-input>
+      </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Password</ion-label>
-            <ion-input type="password" placeholder="••••••"name="password"
-                  [(ngModel)]="persona.password"></ion-input>
-          </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Capacidad</ion-label>
+        <ion-input type="text" name="txtcapacidad" [(ngModel)]="newVehiculo.capacidad" placeholder="4" required></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="ingresar()" expand="block" color="success">Aceptar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
 
-          <br>
-            <ion-button class="btnk2" (click)="ingresar()" expand="block" fill="solid" shape="round">
-              Ok
-              </ion-button>
-
-          
-
-          
-
-        
-
-        </ion-list>
-      </form>
-    </ion-card-content>
   </ion-card>
-
-
-
-
-
 
 </ion-content>

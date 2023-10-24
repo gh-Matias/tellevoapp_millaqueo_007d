@@ -32,7 +32,7 @@ export class AppComponent {
       icon: 'add-circle-outline'
     },
     {
-      name: 'unirse al grupo',
+      name: 'Unirse al grupo',
       redirecTo: '/unirse',
       icon: 'people-outline'
     },

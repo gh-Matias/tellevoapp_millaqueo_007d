@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-ruta',
   templateUrl: './ruta.page.html',
@@ -15,7 +17,17 @@ export class RutaPage implements OnInit {
     capacidad:''
   }
 
-  constructor(private alertController: AlertController) { }
+  constructor(
+    private authservice: AuthService,
+    private router: Router,
+    private alertController: AlertController) { }
+  cerrarSesion() {
+    // Elimina los datos de la sesión del sessionStorage
+    sessionStorage.clear(); 
+
+    // Redirige al inicio de nvo
+    this.router.navigateByUrl('/inicio');
+  }
 
   ngOnInit() {
   }
