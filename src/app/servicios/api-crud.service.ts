@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IAnimalitos } from '../pages/interfaces/interfaces';
 import { environment } from 'src/environments/environment';
-import { IAnimalito } from '../pages/interfaces/interfaces';
-import { IPalabra, IPalabras } from '../pages/interfaces/interfaces';
+import { IAnimalito, IPalabra, IPalabras } from '../pages/interfaces/interfaces';
 
 
 @Injectable({
@@ -34,7 +33,7 @@ export class ApiCrudService {
     return this.httpclient.delete<IAnimalitos>(`${environment.apiUrl}/animalitos/${animalito.id}`);
   }
 
-  CrearPalabra(newPalabra:IPalabra): Observable<IPalabra>{
+  CrearPalabra(newPalabra: IPalabra): Observable<IPalabra>{
     return this.httpclient.post<IPalabras>(`${environment.apiUrl}/palabras`, newPalabra);
   }
 

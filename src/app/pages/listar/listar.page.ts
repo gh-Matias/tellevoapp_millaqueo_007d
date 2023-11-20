@@ -3,8 +3,6 @@ import { ApiCrudService } from 'src/app/servicios/api-crud.service';
 import { LoadingController } from '@ionic/angular';
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
 import { IAnimalitos } from '../interfaces/interfaces';
-import { AlertController } from '@ionic/angular';
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,17 +14,12 @@ export class ListarPage {
 
   animalitos:IAnimalitos[]=[];
 
-  numero : any;
-
   constructor(private animalitoService: ApiCrudService,
-              private loadingCtrl : LoadingController, 
-              private alertcontroller: AlertController,
-              private router: Router) { }
+              private loadingCtrl : LoadingController) { }
 
   
   ionViewWillEnter(){
-    this.loadAnimalitos();
-    this.numero = sessionStorage.getItem('id');
+  this.loadAnimalitos();
   }
 
   async loadAnimalitos(event?: InfiniteScrollCustomEvent){
@@ -55,22 +48,6 @@ export class ListarPage {
         }
       }
     ) 
-  }
-
-  cerrarSesion(){
-    sessionStorage.clear();
-    this.mensajeCerrar();
-    this.router.navigateByUrl('/login');
-    
-  }
-
-  async mensajeCerrar(){
-    const alerta = await this.alertcontroller.create({ 
-      header : 'Graciaas!',
-      message : 'Hasta la próxima! :D',
-      buttons : ['OK']
-    })
-    alerta.present();
   }
  
 }

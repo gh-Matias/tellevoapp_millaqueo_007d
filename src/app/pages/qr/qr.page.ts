@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiCrudService } from 'src/app/servicios/api-crud.service';
-import { AlertController } from '@ionic/angular';
 import { IPalabra } from '../interfaces/interfaces';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-qr',
@@ -10,43 +10,44 @@ import { IPalabra } from '../interfaces/interfaces';
 })
 export class QrPage implements OnInit {
 
-  public mensaje:string;
+  public mensaje: string; 
+  nombre: any;
 
   data={
     texto:''
   }
-  nombre: any;
 
-  newPalabra:IPalabra={
-    username:'',
-    palabra: ''
+  newPalabra: IPalabra={
+    palabra:'',
+    username:''
   }
-  
   //npm install -D @types/qrcode --save
-  constructor(private alertcontroller: AlertController, 
-              private apicrudservice: ApiCrudService) {
-    this.mensaje='Duoc UC Maipú';
-    this.nombre= sessionStorage.getItem('username');
+
+  constructor(private apicrud: ApiCrudService, 
+              private alertcontroller: AlertController) {
+    this.mensaje = 'Hola Mundo';
    }
 
   ngOnInit() {
+    this.nombre = sessionStorage.getItem('username'); 
   }
 
   generarQr(){
     this.mensaje = this.data.texto;
     this.newPalabra.username=this.nombre;
     this.newPalabra.palabra=this.mensaje;
-    this.apicrudservice.CrearPalabra(this.newPalabra).subscribe();
+    this.apicrud.CrearPalabra(this.newPalabra).subscribe();
     this.mostrarMensaje();
     this.data.texto='';
   }
 
+
   async mostrarMensaje(){
-    const alerta = await this.alertcontroller.create({
-      header:'Creando Palabra',
-      message: 'Su QR ha sido Almacenado',
+    const alerta= await this.alertcontroller.create({ 
+      header:'Palabra Creada',
+      message: 'Su Qr ha sido almacenado',
       buttons: ['Ok']
-    })
+    });
     alerta.present();
   }
 

@@ -29,34 +29,41 @@
     {
       "id": 1,
       "username": "cachupin",
-      "role": "Servicios",
-      "password": "duoc1234",
+      "password": "duoc",
+      "role": "usuario",
       "isactive": true
     },
     {
       "id": 2,
       "username": "cachupina",
-      "role": "Academico",
-      "password": "santiago",
+      "password": "maipu",
+      "role": "usuario",
       "isactive": true
     },
     {
-      "id": 3,
-      "username": "usuariodeprueba",
-      "role": "Servicios",
+      "username": "usuario",
       "password": "duoc1234",
-      "isactive": true
+      "role": "academico",
+      "isactive": true,
+      "id": 3
+    },
+    {
+      "username": "usuario",
+      "password": "duoc1234",
+      "role": "academico",
+      "isactive": true,
+      "id": 4
     }
   ],
   "palabras": [
     {
       "id": 1,
       "username": "cachupin",
-      "palabra": "Duoc maipu"
+      "palabra": "Duoc Maipu"
     },
     {
-      "username": "cachupina",
-      "palabra": "Hakuna matata",
+      "palabra": "Hakuna Matata",
+      "username": "cachupin",
       "id": 2
     }
   ]

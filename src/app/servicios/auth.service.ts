@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Users, User } from '../pages/interfaces/interfaces';
 import { environment } from 'src/environments/environment';
+import { User, Users } from '../pages/interfaces/interfaces';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,33 +11,22 @@ export class AuthService {
 
   constructor(private httpclient: HttpClient) { }
 
-  //obtenemos un observable con todos los usuarios almacenados
+  //devuelve todos los objetos de tipo users almacenados en data
   GetAllUsers():Observable<Users>{
     return this.httpclient.get<Users>(`${environment.apiUrl}/usuarios`);
   }
 
-  //obtenemos un observable con la información que se busca a través de username
-  GetUserById(codigo: any):Observable<Users>{
+  //obtenemos un observable de acuerdo al username ingresado en login
+  GetUserById(codigo:any):Observable<Users>{
     return this.httpclient.get<Users>(`${environment.apiUrl}/usuarios/?username=${codigo}`);
   }
 
-  //retorna el nombre de usuario que nos permite controlar guard
-  IsLoggedIn(){
+  IsLogged(){
     return sessionStorage.getItem('username')!=null;
   }
 
-  //creamos un usuario en json
-  CrearUsuario(newUsuario:User): Observable<User>{
+  CrearUsuario(newUsuario: User): Observable<User>{
     return this.httpclient.post<Users>(`${environment.apiUrl}/usuarios`, newUsuario);
-  }
-  
-
-  BuscarUsuarioId(id:number):Observable<Users>{
-    return this.httpclient.get<Users>(`${environment.apiUrl}/usuarios/?id=${id}`);
-  }
-
-  ActualizarUsuario(usuario:any):Observable<Users>{
-    return this.httpclient.put<Users>(`${environment.apiUrl}/usuarios/${usuario.id}`, usuario);
   }
 
 }

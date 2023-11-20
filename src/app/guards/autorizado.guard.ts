@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
 import { ToastController } from '@ionic/angular';
 
@@ -10,33 +9,29 @@ import { ToastController } from '@ionic/angular';
 })
 export class AutorizadoGuard  {
 
-
-  constructor(private authservice: AuthService, 
-              private toast: ToastController,
-              private router: Router){
-  }
+  constructor(private router: Router,
+              private toastcontroller: ToastController, 
+              private authservice: AuthService){}
 
   canActivate():
-    
-    | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (!this.authservice.IsLoggedIn()){
-        this.showToast('Debe iniciar sesión');
-        this.router.navigateByUrl('/login');
+   
+    |Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      if (!this.authservice.IsLogged()){
+        this.showToast('Debe Iniciar sesión');
+        this.router.navigateByUrl("/login");
         return false;
       }
-      else{
-        this.authservice.IsLoggedIn();
-        return true;    
-      }
-      
-    }
+    return true;
+  }
 
-    async showToast(msg: any){
-      const toast = await this.toast.create({
-        message:msg,
-        duration: 3000
-      });
-      toast.present();
-    }
 
+  async showToast(msg: any){
+    const toast=await this.toastcontroller.create({
+      message : msg,
+      duration: 3000
+    });
+    toast.present();
+  }
+
+  
 }

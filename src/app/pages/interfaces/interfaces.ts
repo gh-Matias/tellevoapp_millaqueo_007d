@@ -20,27 +20,26 @@ export interface Users{
     username: string;
     password: string;
     role: string;
-    isactive: boolean
+    isactive: boolean;
 }
 //post
 export interface User{
     username: string;
     password: string;
     role: string;
-    isactive: boolean
+    isactive: boolean;
 }
 
-
-
-//get, put, delete
-export interface IPalabras{
-    id:number;
-    username: string;
-    palabra: string;
-}
 
 //post
 export interface IPalabra{
-    username: string;
     palabra: string;
+    username: string;
+}
+
+//get, put, delete
+export interface IPalabras{
+    id: number;
+    palabra: string;
+    username: string;
 }
