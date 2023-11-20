@@ -1,0 +1,63 @@
+{
+  "animalitos": [
+    {
+      "id": 1,
+      "nombre": "Lulú",
+      "tipoMascota": "Perrito",
+      "raza": "de casa"
+    },
+    {
+      "id": 2,
+      "nombre": "Tobito",
+      "tipoMascota": "Perrito",
+      "raza": "de casa"
+    },
+    {
+      "id": 3,
+      "nombre": "Ninja",
+      "tipoMascota": "Tortuga",
+      "raza": "de agua y tierra"
+    },
+    {
+      "id": 4,
+      "nombre": "León Valiente",
+      "tipoMascota": "Perrito",
+      "raza": "Labrador"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "cachupin",
+      "role": "Servicios",
+      "password": "duoc1234",
+      "isactive": true
+    },
+    {
+      "id": 2,
+      "username": "cachupina",
+      "role": "Academico",
+      "password": "santiago",
+      "isactive": true
+    },
+    {
+      "id": 3,
+      "username": "usuariodeprueba",
+      "role": "Servicios",
+      "password": "duoc1234",
+      "isactive": true
+    }
+  ],
+  "palabras": [
+    {
+      "id": 1,
+      "username": "cachupin",
+      "palabra": "Duoc maipu"
+    },
+    {
+      "username": "cachupina",
+      "palabra": "Hakuna matata",
+      "id": 2
+    }
+  ]
+}
