@@ -13,14 +13,13 @@ import { ToastController } from '@ionic/angular';
 export class ActionSheetPage implements OnInit {
 
   userdata: any;
-
   usuario={
-    id:0,
-    username:"",
-    correo:"",
-    password:"",
-    role:"",
-    isactive:false
+    id:'',
+    username:'',
+    email:'',
+    password:'',
+    conductor:true,
+    esperando:false
   }
   loginForm: FormGroup;
 
@@ -30,8 +29,8 @@ export class ActionSheetPage implements OnInit {
               private toastcontroller: ToastController,
               private builder: FormBuilder) {
                 this.loginForm = this.builder.group({
-                  'correo': new FormControl("", [Validators.required, Validators.minLength(4), Validators.email]),
-                  'password': new FormControl("", [Validators.required, Validators.minLength(4)])
+                  'email': new FormControl("", [Validators.required, Validators.minLength(8), Validators.email]),
+                  'password': new FormControl("", [Validators.required, Validators.minLength(8)])
                 })
                }
 
@@ -57,26 +56,28 @@ export class ActionSheetPage implements OnInit {
   login(){
     console.log("Codificando login");
     if (this.loginForm.valid){
-      this.authservice.GetUserById(this.loginForm.value.correo).subscribe(resp=>{ 
+      this.authservice.GetUserById(this.loginForm.value.email).subscribe(resp=>{ 
         this.userdata = resp;
         console.log(this.userdata);
+        console.log("probando error");
         if (this.userdata.length>0){ //el objeto que buscamos existe en JSON
           this.usuario = {
             id: this.userdata[0].id,
             username: this.userdata[0].username,
-            correo:this.userdata[0].correo,
+            email:this.userdata[0].email,
             password: this.userdata[0].password,
-            role: this.userdata[0].role,
-            isactive: this.userdata[0].isactive
+            conductor: this.userdata[0].conductor,
+            esperando: this.userdata[0].esperando
           }
+          console.log("2222");
           if (this.usuario.password === this.loginForm.value.password){
-            if (this.usuario.isactive){
+            if (this.usuario.conductor){
               sessionStorage.setItem('username', this.usuario.username);
-              sessionStorage.setItem('correo',this.usuario.correo);
-              sessionStorage.setItem('role', this.usuario.role);
+              sessionStorage.setItem('email',this.usuario.email);
               sessionStorage.setItem('ingresado', 'true');
               this.showToast('Sesión Iniciada');
               this.router.navigateByUrl('/saludo');
+              this.loginForm.reset();
             }
             else{
               this.UserInactivo();
@@ -87,6 +88,7 @@ export class ActionSheetPage implements OnInit {
             this.DatoError();
             this.loginForm.reset();
           }
+          console.log("3333");
 
         }
         else{

@@ -11,7 +11,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
     IonicModule,
     FormularioPageRoutingModule
   ],

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="md">
+    <ion-title>Datos del Viaje</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <img src="assets/imgs/avatar.svg" alt="">
+    <div class="container-input-sup">
+      <div class="simbolo">
+        <div class="linea"></div>
+      </div>
+      <form action="">
+        <ion-item fill="outline">
+          <ion-input placeholder="Desde Duoc Maipu" disabled></ion-input>
+        </ion-item>
+        <input placeholder="¿A Donde?" #inputAutocmplt class="autocompletado">
+      </form>
+    </div>
+
+    <div class="container-input-inf">
+      <ion-item fill="outline">
+        <ion-label>Patente:</ion-label>
+        <ion-input [(ngModel)]="patente"></ion-input>
+      </ion-item>
+      <ion-item fill="outline">
+        <ion-label>Salida:</ion-label>
+        <ion-input [(ngModel)]="salida"></ion-input>
+      </ion-item>
+      <ion-item fill="outline">
+        <ion-label>Valor:</ion-label>
+        <ion-input [(ngModel)]="valor"></ion-input>
+      </ion-item>
+      <ion-item fill="outline">
+        <ion-label>N° Pasajeros:</ion-label>
+        <ion-input [(ngModel)]="numPasajeros"></ion-input>
+      </ion-item>
+      <ion-button mode="ios" expand="block" color="tertiary" (click)="agregarViaje()">Agregar Viaje</ion-button>
+    </div>
+  </div>
+</ion-content>

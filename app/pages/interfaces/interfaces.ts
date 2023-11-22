@@ -1,13 +1,32 @@
-export interface Users{
-    id:number;
+//gets?
+export interface User{
+    id?:number;
     username: string;
-    correo: string;
+    email: string;
     password: string;
-    role: string;
-    isactive: boolean;
+    conductor: boolean;
+    esperando?: boolean;
 }
-export interface Movil{
-    tipo: string;
-    matricula: string;
-    capacidad: number;
+//Post (sin id)
+export interface Users{
+    username: string;
+    email: string;
+    password: string;
+    conductor: boolean;
+    esperando?: boolean;
+}
+export interface Viaje{
+    id?: string;
+    estado: string;
+    hora: string;
+    patente: string;
+    destino: {
+        lat: number;
+        lng:number;
+        direccion: string;
+    };
+    pasajeros?: number[];
+    conductor:number;
+    valorViaje: number;
+    cantidadPasajeros:number;
 }

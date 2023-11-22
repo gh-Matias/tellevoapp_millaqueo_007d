@@ -22,7 +22,7 @@ export class AppComponent {
     },
     {
       name: 'Registrate',
-      redirecTo: '/formulario',
+      redirecTo: '/question',
       icon: 'log-in-outline'
     },
 

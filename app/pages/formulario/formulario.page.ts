@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { Users, Movil } from '../interfaces/interfaces';
+import { User } from '../interfaces/interfaces';
 import { ApicrudService } from 'src/app/servicios/apicrud.service';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
@@ -11,19 +11,15 @@ import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms'
   styleUrls: ['./formulario.page.scss'],
 })
 export class FormularioPage implements OnInit {
-  newUsuario: Users={
+  newUsuario: User={
     id: 0,
     username:"",
-    correo: "",
+    email: "",
     password: "",
-    role: "",
-    isactive: true,
+    conductor: true,
+    esperando: false,
   }
-  newVehiculo: Movil={
-    tipo: "",
-    matricula: "",
-    capacidad: 0,
-  }
+ 
   loginForm: FormGroup;
   
   constructor(
@@ -50,7 +46,6 @@ export class FormularioPage implements OnInit {
       
     });
     this.apiCrud.CrearUsuario(this.newUsuario).subscribe();
-    this.apiCrud.CrearVehiculo(this.newVehiculo).subscribe();
     this.router.navigateByUrl("/inicio");
     await alert.present();
   // }

@@ -26,7 +26,7 @@
   
       <ion-item lines="full">
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" name="txtcorreo" [(ngModel)]="newUsuario.correo" placeholder="matias@gmail.com" required></ion-input>
+        <ion-input type="email" name="txtcorreo" [(ngModel)]="newUsuario.email" placeholder="matias@gmail.com" required></ion-input>
       </ion-item>
   
       <ion-item lines="full">
@@ -36,17 +36,17 @@
 
       <ion-item lines="full">
         <ion-label position="floating">Vehiculo</ion-label>
-        <ion-input type="text" name="txttipo" [(ngModel)]="newVehiculo.tipo" placeholder="sedan" required></ion-input>
+        <ion-input type="text" name="txttipo" placeholder="sedan" ></ion-input>
       </ion-item>
 
       <ion-item lines="full">
         <ion-label position="floating">Matricula</ion-label>
-        <ion-input type="text" name="txtmatricula" [(ngModel)]="newVehiculo.matricula" placeholder="GW-KG-64" required></ion-input>
+        <ion-input type="text" name="txtmatricula"  placeholder="GW-KG-64" ></ion-input>
       </ion-item>
 
       <ion-item lines="full">
         <ion-label position="floating">Capacidad</ion-label>
-        <ion-input type="text" name="txtcapacidad" [(ngModel)]="newVehiculo.capacidad" placeholder="4" required></ion-input>
+        <ion-input type="text" name="txtcapacidad"  placeholder="4" ></ion-input>
       </ion-item>
   
       <ion-row>
