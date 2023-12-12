@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="volver"
+        color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+
+    <form>
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" name="txtNombre" [(ngModel)]="newUsuario.username" placeholder="matias" required></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" name="txtcorreo" [(ngModel)]="newUsuario.email" placeholder="matias@gmail.com" required></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" name="txtPassword" [(ngModel)]="newUsuario.password" placeholder="*****" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Vehiculo</ion-label>
+        <ion-input type="text" name="txttipo" placeholder="sedan" ></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Matricula</ion-label>
+        <ion-input type="text" name="txtmatricula"  placeholder="GW-KG-64" ></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Capacidad</ion-label>
+        <ion-input type="text" name="txtcapacidad"  placeholder="4" ></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="ingresar()" expand="block" color="success">Aceptar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+
+  </ion-card>
+
+</ion-content>

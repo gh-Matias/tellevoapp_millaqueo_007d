@@ -1,0 +1,115 @@
+{
+  "usuarios": [
+    {
+      "id": 2,
+      "username": "json",
+      "email": "json@1234.cl",
+      "password": "json1234",
+      "conductor": false,
+      "esperando": false
+    },
+    {
+      "id": 5,
+      "username": "json2",
+      "email": "json@1234.cl",
+      "password": "json12345",
+      "conductor": true,
+      "esperando": false
+    },
+    {
+      "id": 6,
+      "username": "json",
+      "email": "json@1234.cl",
+      "password": "json1234",
+      "conductor": true,
+      "esperando": false
+    },
+    {
+      "id": 7,
+      "username": "kiara",
+      "email": "kiara1234@4.cl",
+      "password": "kiara1234",
+      "conductor": true,
+      "esperando": false
+    },
+    {
+      "id": 8,
+      "username": "kiara",
+      "email": "kiara1234@4.cl",
+      "password": "kiara1234",
+      "conductor": true,
+      "esperando": false
+    },
+    {
+      "username": "kiara1",
+      "email": "kiara1234@4.cl",
+      "password": "kiara1234",
+      "conductor": true,
+      "esperando": false,
+      "id": 9
+    },
+    {
+      "username": "kiara1",
+      "email": "kiara1234@4.cl",
+      "password": "kiara1234",
+      "conductor": true,
+      "esperando": false,
+      "id": 10
+    },
+    {
+      "username": "santiago",
+      "email": "santi@1234.cl",
+      "password": "santiago1234",
+      "conductor": true,
+      "esperando": false,
+      "id": 11
+    },
+    {
+      "username": "santiago",
+      "email": "santi@1234.cl",
+      "password": "santiago1234",
+      "conductor": true,
+      "esperando": false,
+      "id": 12
+    },
+    {
+      "username": "pgod",
+      "email": "pgod@1.cl",
+      "password": "pgod1234",
+      "conductor": true,
+      "esperando": false,
+      "id": 13
+    },
+    {
+      "username": "uber",
+      "email": "uber@gmail.com",
+      "password": "matias1234",
+      "conductor": true,
+      "esperando": false,
+      "id": 14
+    },
+    {
+      "username": "cachupin",
+      "email": "cachupin@gmail.com",
+      "password": "cachupin",
+      "conductor": true,
+      "esperando": false,
+      "id": 15
+    }
+  ],
+  "viajes": [
+    {
+      "patente": "12321",
+      "valorViaje": 2000,
+      "destino": {
+        "lat": -33.5155639,
+        "lng": -70.7779099,
+        "direccion": "Polideportivo"
+      },
+      "cantidadPasajeros": 4,
+      "estado": "invalido",
+      "conductor": 167886688,
+      "id": 1670000
+    }
+  ]
+}

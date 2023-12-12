@@ -1,0 +1,49 @@
+
+ion-checkbox::part(container) {
+    size: 5px;
+    border-radius: 6px;
+    border: 2px solid #18f77c;
+    
+  }
+
+.title{
+  font-family: 'Playfair Display', serif;
+  text-align:left;
+  
+}
+.fondoHeader{
+  background-color:rgb(55, 207, 131);
+}
+
+.fondoContent{
+    color:rgb(10, 10, 10);
+    text-align: start;
+    padding:10%;
+}
+.ion-title{
+    color: aquamarine;
+    
+}
+.text{
+  color: rgb(254, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: start;
+  letter-spacing: 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+  }
+
+.logo {
+    max-width: 50px; /* Ajusta el tamaño máximo en píxeles según tus necesidades */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+  }
+
+.cerrar-sesion-button {
+  background: none; /* Elimina el fondo de color rojo */
+  color: rgb(255, 255, 255); /* Cambia el color del texto a negro */
+  text-align: right; /* Alinea el botón a la derecha */
+}
+  

@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/"
+        text="volver"
+        color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>perfiles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">perfiles</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <p>Modificar usuario</p>
+  
+
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input type="text" name="txtNombre" [(ngModel)]="usuarios.nombre" placeholder="matias" required></ion-input>
+    </ion-item>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">correo:</ion-label>
+      <ion-input type="text" name="txtRaza" [(ngModel)]="usuarios.email" placeholder="matias@gmail.com" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="updateUsuarios()" expand="block" color="success">Actualizar usuario</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+
+</ion-content>

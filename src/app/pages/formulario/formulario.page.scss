@@ -1,0 +1,15 @@
+
+.btnk2{
+    --background: #51ddaf;
+    --color: rgb(255, 251, 254);
+    --background-hover: #78e7c2;
+    --background-activated: #88f4be;
+    --background-focused: #88f4be;
+    
+  }
+
+.error-message {
+    color: red; /* Color del texto en rojo */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-top: 4px; /* Espacio superior para separar el mensaje del campo */
+}

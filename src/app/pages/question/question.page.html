@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="volver"
+        color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<main>
+  <section class="cta">
+      <h2>¿Quieres registrarte cómo Conductor o pasajero ?</h2>
+      <br>
+      
+      <ion-button class="btnk2" routerLink="/conductorform" expand="block" size="default" fill="solid" shape="round"  >
+        Conductor
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+      <br>
+      <ion-button class="btnk2" routerLink="/pasajeroform" expand="block" size="default" fill="solid" shape="round"  >
+        Pasajero
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+      <br>
+
+  </section>
+</main>
+
+
+</ion-content>

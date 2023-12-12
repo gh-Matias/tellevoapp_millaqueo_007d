@@ -1,0 +1,141 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/"
+        text="volver"
+        color="primary"> </ion-back-button>
+    </ion-buttons>
+    <ion-title ></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium" class="title">detalle del viaje</ion-title>
+      <ion-avatar slot="end" >
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" class="logo"/>
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button  fill="clear" expand="block" color="default" class="cerrar-sesion-button" (click)="cerrarSesion()">
+    <ion-icon name="exit-outline" slot="start"></ion-icon>
+    Cerrar sesión
+  </ion-button>
+  
+
+  <ion-card>
+    <ion-card-header class="fondoHeader" >
+      <ion-card-subtitle class="colorTitulos" style="color:rgb(247, 243, 243)"></ion-card-subtitle>
+      <ion-card-title class="colorTitulos" style="color:rgb(243, 241, 241)" >Ubicacion</ion-card-title>
+    </ion-card-header>
+    <img src="assets/map.PNG" class="ion-padding fondoImg">
+    <ion-card-content class="fondoContent">
+
+      <form>
+        <label for="destino" class="text">Seleccionar la comuna :  </label>
+        <select id="Viaje" name="Viaje">
+          <option value="ED">Elegir Comuna</option>
+          <option value="MU">Maipu</option>
+          <option value="PO">Puente alto</option>
+          <option value="PL">Pudahuel</option>
+          <option value="QA">Quilicura</option>
+          <option value="SB">San bernardo</option>
+          <option value="LC">Las condes</option>
+          <!-- Destinos -->
+        </select>
+        <input type="submit" value="Mostrar rutas">
+      </form>
+     
+    </ion-card-content>
+  
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="fondoHeader">
+      <ion-card-subtitle class="colorTitulos" style="color:rgb(255, 253, 253)"></ion-card-subtitle>
+      <ion-card-title class="colorTitulos" style="color:rgb(255, 255, 255)" >Vehiculo</ion-card-title>
+    </ion-card-header>
+
+    <ion-list>
+     <ion-item>
+      <ion-thumbnail slot="start" >
+        <img alt="sedan" src="assets/sedan.jpg" />
+      </ion-thumbnail>
+
+      <ion-checkbox slot="start" ></ion-checkbox>
+      <ion-label>Sedan</ion-label>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img alt="coupe" src="assets/bmw.jpg" />
+      </ion-thumbnail>
+      <ion-checkbox slot="start" ></ion-checkbox>
+      <ion-label>Coupe</ion-label>
+      <br>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img alt="suv" src="assets/suv.jfif" />
+      </ion-thumbnail>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Suv</ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img alt="van" src="assets/minivan.jpg" />
+      </ion-thumbnail>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Minivan</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-card>
+<br>
+
+
+<ion-card>
+  <ion-card-header class="fondoHeader">
+    <ion-card-subtitle class="colorTitulos" style="color:rgb(245, 241, 241)"></ion-card-subtitle>
+    <ion-card-title class="colorTitulos" style="color:rgb(245, 242, 242)" >Detalle</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content class="fondoContent">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Matricula</ion-label>
+        <ion-input type="text" placeholder="xxxxx"  name="matricula"
+              [(ngModel)]="vehiculo1.matricula"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tarifa</ion-label>
+        <ion-input type="number" placeholder="$$$$"  name="tarifa"
+              [(ngModel)]="vehiculo1.tarifa"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Capacidad</ion-label>
+        <ion-input type="number" placeholder="8"  name="capacidad"
+              [(ngModel)]="vehiculo1.capacidad"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+
+  </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-button (click)="finalizar()" expand="block" fill="solid" color="success" shape="round">
+      Aceptar
+      </ion-button>
+
+
+</ion-content>
