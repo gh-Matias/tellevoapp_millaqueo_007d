@@ -64,7 +64,7 @@ export class ApmapPage implements OnInit {
       if (status === google.maps.DirectionsStatus.OK) {
         this.directionsDisplay.setDirections(response);
       } else {
-        alert('No direccion disponble para: ' + status);
+        alert('No direccion disponible para: ' + status);
       }
     });
 
